@@ -1,0 +1,40 @@
+services:
+  httpd:
+    build:
+      context: .
+      dockerfile: apache.dockerfile
+    ports:
+      - 80:80
+    volumes:
+      - ./src:/var/www/html/public
+    depends_on:
+      - php
+      - mysql
+    restart: always #autre :unless_stopped
+  php:
+    build:
+      context: .
+      dockerfile: php.dockerfile
+    volumes:
+      - ./src:/var/www/html/public
+  mysql:
+    image: mariadb:10.5
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_USER: laurent
+      MYSQL_PASSWORD: secret
+      MYSQL_ROOT_SECRET: secret
+      MARIADB_DATABASE: laurent
+      MARIADB_ROOT_PASSWORD: secret
+    volumes:
+      - ./mysql:/var/lib/mysql
+  phpmyadmin:
+    image: phpmyadmin
+    ports:
+      - 8080:80
+    environment:
+      - PMA_ARBITRARY=1
+    depends_on:
+      - php
+      - mysql
