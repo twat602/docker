@@ -17,6 +17,7 @@ services:
       dockerfile: php.dockerfile
     volumes:
       - ./src:/var/www/html/public
+    restart: always
   mysql:
     image: mariadb:10.5
     ports:
