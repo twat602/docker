@@ -1,0 +1,18 @@
+{
+    "articles": [
+        {
+            "title": "Un titre alternatif",
+            "author": "Vous",
+            "body": "Notre article alternatif"
+        },
+        {
+            "title": "Un deuxème alternatif",
+            "author": "Vous",
+            "body": "Notre deuxième article alternatif"
+        }
+    ],
+    "profile": {
+        "name": "Vous",
+        "email": "laurent.neveux@oclock.io"
+    }
+}

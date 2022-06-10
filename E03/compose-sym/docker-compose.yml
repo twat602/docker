@@ -1,0 +1,63 @@
+services:
+    apache:
+        build:
+            context: .
+            dockerfile: apache.dockerfile
+        ports:
+            - 80:80
+        volumes:
+            - ./src:/var/www/html
+        depends_on:
+            - mysql
+            - php
+        restart: unless-stopped
+    php:
+        build:
+            context: .
+            dockerfile: php.dockerfile
+        volumes:
+            - ./src:/var/www/html
+        restart: unless-stopped
+    mysql:
+        image: mariadb:10.5
+        ports:
+            - 3306:3306
+        environment:
+            MYSQL_USER: symfony
+            MYSQL_PASSWORD: secret
+            MYSQL_ROOT_SECRET: secret
+            MARIADB_DATABASE: symfony
+            MARIADB_ROOT_PASSWORD: secret
+        volumes:
+            - ./mysql:/var/lib/mysql
+        restart: unless-stopped
+    composer:
+        build:
+            context: .
+            dockerfile: composer.dockerfile
+        volumes:
+            - ./src:/var/www/html
+        working_dir: /var/www/html
+        depends_on:
+            - php
+    adminer:
+        image: adminer
+        ports:
+            - 8080:8080
+        depends_on:
+            - php
+            - mysql
+        restart: unless-stopped
+    console:
+        build:
+            context: .
+            dockerfile: php.dockerfile
+        volumes:
+            - ./src:/var/www/html
+        entrypoint: ['php', '/var/www/html/bin/console']
+    npm:
+        image: node:current-alpine
+        volumes:
+            - ./src:/var/www/html
+        entrypoint: ['npm']
+        working_dir: /var/www/html

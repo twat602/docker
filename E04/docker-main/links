@@ -1,0 +1,16 @@
+Slides intro https://docs.google.com/presentation/d/15SOfOF77NG-ryXcf2e9gsgcc0qoImb0bl2tJewnhHlg/edit#slide=id.g127bf15581c_0_125
+Support N°1 : bases, Dockerfile, DockerHub, Play-With-Docker https://github.com/O-clock-Alternance-CDA/docker-basics
+Challenge https://github.com/O-clock-Alternance-CDA/docker-challenge-e01
+Support N°2 : applis multi-conteneurs (sans puis avec docker-compose) https://github.com/O-clock-Alternance-CDA/docker-multi-container-apps
+
+DevOps :
+Slides intro https://docs.google.com/presentation/d/1lUyqVJviu_no25lc4hHLh4cjbqqtaS_074vUSHJ4nKw/edit#slide=id.g5d5f55ffe4_1_0
+Support : Github Actions, Tests unitaires, Docker Swarm & Portainer https://github.com/O-clock-Alternance-CDA/devops-exercice
+Suite support : HAProxy & SonarQube https://github.com/O-clock-Alternance-CDA/devops-exercice-partie2
+Challenge https://github.com/O-clock-Alternance-CDA/devops-parcours-e02
+
+https://github.com/O-clock-Teach/todolist-with-docker
+https://drive.google.com/drive/u/0/folders/13OjNO2StFqyRwQXfp9akc_iRlqsiNHUj
+https://github.com/O-clock-Formations-Pro/Formations-Pro/wiki/1-semaine-avant
+https://devcenter.heroku.com/categories/deploying-with-docker
+https://github.com/O-clock-Alternance-CDA/docker-basics/blob/master/README-dockerhub-PWD.md

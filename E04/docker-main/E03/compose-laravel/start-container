@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+chown -R laurent:laurent ./src
+chmod -R ugo+rw ./src/storage

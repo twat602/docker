@@ -1,0 +1,4 @@
+- [x] Créer les cockpits dans slippers
+- [ ] Créer les repos
+- [x] Créer les drives
+- [x] Faire un point avec les bosses
