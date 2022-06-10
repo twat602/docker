@@ -27,7 +27,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Buil Docker Image
-        run: docker build - t twattiaux/formationdocker . .E01/exo/image
+        run: docker build - t twattiaux/formationdocker . 
         
 
 
